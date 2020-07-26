@@ -1,0 +1,15 @@
+.Table {
+    background-color: gray;
+    width: 82vw;
+    height: 82vh;
+    opacity: 0.3;
+    border-radius: 10px;
+    display: flex;
+
+    .empty-table {
+        margin:auto;
+        p {
+            color: white;
+        }
+    }
+}

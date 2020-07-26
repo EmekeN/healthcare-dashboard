@@ -1,0 +1,47 @@
+.Sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    background-color: gray;
+    opacity: .70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+        width: 100px;
+        height: 50px;
+        box-sizing: content-box;
+        padding: 20px;
+        border-bottom: thin solid white;
+    }
+    
+    .logout {
+        text-decoration: none;
+        display: flex;
+        color: black;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        border-top: thin solid white;
+
+        .logout-img {
+            width: 25px;
+            height: 25px;
+            box-sizing: content-box;
+            padding: 10px;
+        }
+    }
+
+    .logout:hover {
+        transform: translate(10px);
+        transition: var(--transition-speed);
+    }
+
+    .logout:not(:hover) {
+        transition: var(--transition-speed);
+    }
+}
+

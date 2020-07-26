@@ -1,0 +1,25 @@
+.Dashboard {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    background-color: #F8F8FF;
+    display: flex;
+    padding-left: 70px;
+    flex-direction: column;
+    .header {
+        display: flex;
+        align-items: baseline;
+        height: min-content;
+    }
+
+  }
+
+  @media screen and (max-width: 900px) {
+    .Sidebar {
+        display: none;
+    }
+
+    .Dashboard {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+}
