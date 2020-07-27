@@ -1,0 +1,21 @@
+@import "./../base.scss";
+.search-results {
+    height: 45px;
+    width: 350px;
+    border-radius: $border-radius;
+    background-color: white;
+
+    .provider {
+        padding: 10px 0;
+    }
+}
+
+.search-results:hover {
+    background-color: gray;
+}
+
+@media screen and (max-width: 900px) {
+    .search-results {
+        width: 250px;
+    }
+}

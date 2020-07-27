@@ -1,3 +1,4 @@
+@import "./../base.scss";
 .SearchBar {
     padding: 20px;
     margin-left: 100px;
@@ -7,7 +8,7 @@
         display: flex;
         align-items: center;
         border: thin solid gray;
-        border-radius: 5px;
+        border-radius: $border-radius;
         background-color: white;
     }
 
@@ -17,40 +18,39 @@
         border: none;
         background-color: white;
         padding: 5px;
-        border-radius: 5px;
+        border-radius: $border-radius;
         margin: 0 10px;
-        opacity: .5;
-
+        opacity: 0.5;
     }
 
     .search-bar-container {
         display: flex;
         justify-content: center;
     }
-    
+
     .search-input {
         width: 200px;
         height: 30px;
         margin-left: 0px;
-        border:none;
-        border-radius: 5px;    
+        border: none;
+        border-radius: $border-radius;
     }
 
     .search-input:not(:focus) {
-        transition: .3s;
+        transition: 0.3s;
         width: 200px;
     }
 
     .search-input:hover {
         width: 300px;
-        transition: var(--transition-speed);
+        transition: $transition-speed;
         outline: none;
     }
 
     .search-input:focus {
         border-left: unset;
         width: 300px;
-        transition: var(--transition-speed);
+        transition: $transition-speed;
         border: none;
     }
 
@@ -59,26 +59,20 @@
         position: absolute;
         z-index: 2;
         border: thin solid gray;
-        border-radius: 5px;
+        border-radius: $border-radius;
         background-color: white;
-
     }
-    
-    .search-results {
-        height: 45px;
-        width: 350px;
-        // border: thin solid gray;
-        border-radius: 5px;
-        background-color: white;
-
-        .provider {
-            padding: 10px 0;
-        }
-    }
-    
-    .search-results:hover {
-        background-color: gray;
-    }
-
 }
+@media screen and (max-width: 900px) {
+    .SearchBar {
+        margin-left: 20px;
+    }
 
+    .search-input:hover {
+        width: 200px !important;
+    }
+
+    .search-input:focus {
+        width: 200px !important;
+    }
+}

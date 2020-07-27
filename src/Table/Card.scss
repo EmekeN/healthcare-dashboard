@@ -1,0 +1,67 @@
+@import "./../base.scss";
+.Card {
+    width: 300px;
+    height: 370px;
+    border: thin solid white;
+    @include box-shadow($box-shadow);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0px 35px 35px;
+    border-radius: 10px;
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .card-img {
+        border-radius: 100px;
+        height: 60px;
+        width: 60px;
+        margin: 0 auto;
+        margin-top: 10px;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        color: black;
+        font-weight: bolder;
+    }
+
+    button {
+        width: 175px;
+        height: 50px;
+        border-radius: $border-radius;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: darkgray;
+    }
+
+    .card-back {
+        transition: ease-in 0.5s;
+    }
+
+    .task-list {
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: lighter;
+
+        .task {
+            padding: 10px;
+            border-radius: $border-radius;
+        }
+    
+        .task:hover {
+            background-color: gray;
+        }
+    }
+
+}

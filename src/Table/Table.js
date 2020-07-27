@@ -1,43 +1,37 @@
-import React, { Component} from 'react';
-import API from './../API';
-import './Table.scss';
+import React, { Component } from "react";
+import Card from "./Card";
+import "./Table.scss";
 
 export default class Table extends Component {
     constructor(props) {
         super(props);
-        this.state =  {
-            tableProviders: [],
-
-        }
-        this.galileoAPI = new API();
+        this.state = {};
     }
-
-    //Call API for each
-    // componentDidMount() {
-
-    // }
-
-    componentDidUpdate(prevProps) {
-        //Use providers prop to add to table
-    }
-
-    // componentWillReceiveProps(nextProps) {
-    //     console.log(nextProps);
-    //     if(this.props.activeProviders !== nextProps.activeProviders) {
-    //         console.log(nextProps)
-    //     }
-
-
-    // }
 
     render() {
-        // const providers = this.props.activeProviders;
-        return(
+        const providerIDs = this.props.activeProviders;
+        // const
+        return (
             <div className="Table">
-                <div className="empty-table">
-                    <p>Search for providers to view more information...</p>
-                </div>
+                {providerIDs.length === 0 && (
+                    <div className="table-empty">
+                        <p>Search for providers to view more information...</p>
+                    </div>
+                )}
+
+                {providerIDs.length > 0 &&
+                    providerIDs.map((id) => {
+                        return (
+                            <Card
+                                key={id}
+                                id={id}
+                                handleDeleteProvider={
+                                    this.props.handleDeleteProvider
+                                }
+                            />
+                        );
+                    })}
             </div>
-        )
+        );
     }
 }

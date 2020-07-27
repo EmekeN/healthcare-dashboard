@@ -1,15 +1,5 @@
-:root {
-  --sidebar-width: 9vw;
-  --transition-speed: ease-in .3s;
-}
+@import './base.scss';
 
 .App {
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-img {
-  object-fit: contain;
+    text-align: center;
 }

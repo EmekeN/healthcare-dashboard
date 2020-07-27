@@ -1,15 +1,33 @@
+@import "./../base.scss";
 .Table {
     background-color: gray;
-    width: 82vw;
-    height: 82vh;
+    width: 85vw;
+    height: 80vh;
     opacity: 0.3;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
 
-    .empty-table {
-        margin:auto;
+    .table-empty {
+        margin: auto;
         p {
             color: white;
         }
+    }
+
+    .table-card {
+        width: 300px;
+        height: 400px;
+        border: thin solid white;
+        box-shadow: 7px 6px 20px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 7px 6px 20px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 7px 6px 20px 0px rgba(0, 0, 0, 0.75);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Table {
+        align-self: center;
     }
 }

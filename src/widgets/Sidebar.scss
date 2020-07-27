@@ -1,22 +1,26 @@
+@import "./../base.scss";
+
 .Sidebar {
-    width: var(--sidebar-width);
+    width: $sidebar-width;
     height: 100vh;
     position: fixed;
     left: 0px;
     background-color: gray;
-    opacity: .70;
+    opacity: 0.7;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .logo {
-        width: 100px;
-        height: 50px;
+        width: 85%;
+        height: 30px;
         box-sizing: content-box;
         padding: 20px;
+        margin-bottom: 10px;
         border-bottom: thin solid white;
+
     }
-    
+
     .logout {
         text-decoration: none;
         display: flex;
@@ -26,22 +30,38 @@
         bottom: 0;
         padding: 10px;
         border-top: thin solid white;
+        transition: $transition-speed;
+        width:  $sidebar-width + 2vw;
+        margin-left: 10px;
 
         .logout-img {
             width: 25px;
             height: 25px;
             box-sizing: content-box;
             padding: 10px;
+            margin: auto;
         }
+
+        p {
+            margin-left: 25px;
+        }
+
     }
 
     .logout:hover {
-        transform: translate(10px);
-        transition: var(--transition-speed);
+        @include transform(translate(10px), $transition-speed);
     }
 
     .logout:not(:hover) {
-        transition: var(--transition-speed);
+        @include transform(translate(-10px), $transition-speed);
     }
+
 }
 
+@media screen and (max-width: 1200px) {
+    .logout {
+        p {
+            display: none;
+        }
+    }
+}
