@@ -1,9 +1,10 @@
 ## Galileo Take Home Test
 Welcome to my implementation of Galileo's front end coding excercise
+[My implementation of a healthcare dashboard with mock data](./assets/galileo-take-home.png)
 
 ## Discussion
 
-I used React class components and my own CSS to create this UX for the requirements.
+Given mock API data and a barebones set of requirements, I used React class components, HTML and SaSS to create this UX for the requirements.
 
 ### `npm start` or `yarn start`
 
