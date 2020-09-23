@@ -1,5 +1,5 @@
-## Galileo Take Home Test
-Welcome to my implementation of Galileo's front end coding excercise
+## Healthcare Dashboard Demo
+A demo of using mock data to create a search and review experience. 
 ![My implementation of a healthcare dashboard with mock data](./src/assets/galileo-take-home.png)
 
 ## Discussion
