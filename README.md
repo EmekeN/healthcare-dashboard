@@ -6,7 +6,7 @@ A demo of using mock data to create a search and review experience.
 
 Given mock API data and a barebones set of requirements, I used React class components, HTML and SaSS to create this UX for the requirements.
 
-### `npm start` or `yarn start`
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
